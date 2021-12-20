@@ -11,7 +11,7 @@ function update() {
       //   itemJsonArray.push([tit, desc]);
       //   localStorage.setItem("itemsJson", JSON.stringify(itemJsonArray));
     }
-
+   
     //populating the table
     tableBody = document.getElementById("tableBody");
     let str = "";
@@ -22,7 +22,8 @@ function update() {
           <td>${element[0]}</td>
           <td>${element[1]}</td>
           <td><button class="btn btn-sm btn-primary" onclick="deleted(${index})">Delete</button></td>
-        </tr>
+          <td id="countdown"></td>
+          </tr>
         `;
     });
     tableBody.innerHTML = str;
@@ -63,3 +64,4 @@ function update() {
       localStorage.clear();
     update();
   }
+  
